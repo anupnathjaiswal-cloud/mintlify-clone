@@ -1,0 +1,206 @@
+:root {
+    --font-inter: "inter", "inter Fallback";
+    --font-geist-mono: "Geist Mono", "Geist Mono Fallback";
+    --color-background-main: #fff;
+    --color-background-invert: #08090a;
+    --color-text-main: #08090a;
+    --color-text-invert: #fff;
+    --color-text-soft: rgba(8, 9, 10, 0.8);
+    --color-text-sub: rgba(8, 9, 10, 0.6);
+    --color-muted: rgba(8, 9, 10, 0.5);
+    --color-border-sub: rgba(8, 9, 10, 0.07);
+    --color-background-soft: rgba(8, 9, 10, 0.03);
+    --color-border-surface: rgba(8, 9, 10, 0.05);
+    --color-border-soft: rgba(8, 9, 10, 0.15);
+    --color-brand: #0c8c5e;
+    --color-brand-light: #0c8c5e;
+    --color-border-solid: #08090a;
+    --color-muted-invert: rgba(255, 255, 255, 0.5);
+    --twoslash-border-color: #dbdfde;
+    --twoslash-underline-color: currentColor;
+    --twoslash-popup-bg: #f3f7f6;
+    --twoslash-popup-color: inherit;
+    --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    --twoslash-code-font: inherit;
+    --twoslash-code-font-size: 1em;
+    --twoslash-matched-color: inherit;
+    --twoslash-highlighted-border: rgba(195, 125, 13, 0.314);
+    --twoslash-highlighted-bg: rgba(195, 125, 13, 0.125);
+    --twoslash-unmatched-color: #888;
+    --twoslash-cursor-color: rgba(136, 136, 136, 0.533);
+    --twoslash-error-color: #d45656;
+    --twoslash-error-bg: rgba(212, 86, 86, 0.125);
+    --twoslash-warn-color: #c37d0d;
+    --twoslash-warn-bg: rgba(195, 125, 13, 0.125);
+    --twoslash-tag-color: #3772cf;
+    --twoslash-tag-bg: rgba(55, 114, 207, 0.125);
+    --twoslash-tag-warn-color: var(--twoslash-warn-color);
+    --twoslash-tag-warn-bg: var(--twoslash-warn-bg);
+    --twoslash-tag-annotate-color: #1ba673;
+    --twoslash-tag-annotate-bg: rgba(27, 166, 115, 0.125);
+    --twoslash-text-size: 0.8rem;
+    --twoslash-docs-tag-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+}
+
+body {
+    background-color: var(--color-background-invert);
+    color: #fff;
+    display: block;
+}
+
+.header {
+    width: 95%;
+    margin: 15px auto;
+    /* display: block; */
+    position: fixed;
+    /* background-color: red; */
+    background-color: var(--twoslash-popup-shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: center; */
+}
+.logo svg {
+    width: 120px;
+    height: auto;
+}
+.p1 {
+    fill: var(--color-text-invert);
+}
+
+.nav-menus {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menus a {
+    text-decoration: none;
+    color: var(--color-text-invert);
+    margin-left: 25px;
+    padding: 5px 10px;
+}
+
+.nav-menus a:hover {
+    background-color: var(--color-background-soft);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.header button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    background-color: var(--color-background-soft);
+    border: none;
+    color: var(--color-text-invert);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#str-free {
+    background-color: var(--color-background-main);
+    color: var(--color-text-main);
+    cursor: pointer;
+    /* font-size: 15px; */
+}
+
+#str-free:hover {
+    background-color: var(--twoslash-border-color);
+}
+
+/* Hero-Section */
+.hero {
+    /* margin-top: 500px; */
+    /* margin-top: 400px; */
+
+    background-image: url("https://www.mintlify.com/hero/bg-dark.svg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+}
+
+#main-head {
+    font-size: 24px;
+    font-weight: lighter;
+}
+#head-desc {
+    font-size: 18px;
+}
+
+#email-inp {
+    background-color: var(--color-muted-invert);
+    padding: 6px 8px;
+    border-radius: 30px;
+    width: 400px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#email-inp input {
+    flex: 1;
+    background: none;
+    height: 38px;
+    border: none;
+    outline: none;
+    justify-content: center;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+#email-inp input::placeholder {
+    color: #5b5959;
+}
+
+#strt-now {
+    padding: 10px 15px;
+    border-radius: 25px;
+    background-color: var(--color-background-main);
+    border: none;
+    color: var(--color-text-main);
+    cursor: pointer;
+    justify-content: end;
+    font-size: 15px;
+    font-weight: 500;
+    /* font-weight: bold; */
+}
+
+#strt-now:hover {
+    background-color: var(--twoslash-border-color);
+    /* cursor: pointer; */
+}
+
+.sub-hero {
+    /* margin-top: 400px; */
+    background-image: url("https://www.mintlify.com/hero/hero-image-dark.svg");
+    width: 95%;
+    /* max-width: 900px; */
+    height: 900px; /* Fixed visual height */
+    margin: 40px auto;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+    outline: 5px solid rebeccapurple;
+}
